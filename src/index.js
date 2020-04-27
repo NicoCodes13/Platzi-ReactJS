@@ -1,7 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDom from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
-const container = document.getElementById('app');
+import "./global.css";
+import Badge from "./components/Badge";
 
-const element = <h1>Hello, Platzi Badges</h1>;
-ReactDOM.render(element, container);
+const name = "Nicolas";
+const element = (
+  <div>
+    <h1>Hola, soy {name}</h1>
+    <p>Soy GameDeveloper</p>
+  </div>
+);
+
+const container = document.getElementById("app");
+
+ReactDom.render(<Badge />, container);
