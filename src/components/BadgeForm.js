@@ -5,12 +5,6 @@ export class BadgeForm extends React.Component {
     console.log("button was clicked");
   };
 
-  // handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log("From was submitted");
-  //   console.log(this.props);
-  // };
-
   render() {
     return (
       <div>
@@ -27,7 +21,6 @@ export class BadgeForm extends React.Component {
               value={this.props.formValues.firstName}
             />
           </div>
-
           <div className="font-group">
             <label>Last name</label>
             <input
@@ -38,7 +31,6 @@ export class BadgeForm extends React.Component {
               value={this.props.formValues.lastName}
             />
           </div>
-
           <div className="font-group">
             <label>Email</label>
             <input
@@ -49,7 +41,6 @@ export class BadgeForm extends React.Component {
               value={this.props.formValues.email}
             />
           </div>
-
           <div className="font-group">
             <label>Job Title</label>
             <input
@@ -60,7 +51,6 @@ export class BadgeForm extends React.Component {
               value={this.props.formValues.jobTitle}
             />
           </div>
-
           <div className="font-group">
             <label>Twitter</label>
             <input
@@ -71,10 +61,13 @@ export class BadgeForm extends React.Component {
               value={this.props.formValues.twitter}
             />
           </div>
-
           <button onClick={this.handleClick} className="btn btn-primary">
             Save
           </button>
+
+          {this.props.error && (
+            <p className="text-danger">{this.props.error.message}</p>
+          )}
         </form>
       </div>
     );
