@@ -1,4 +1,5 @@
 {
+  "homepage": "https://nickcar13.github.io/Platzi-ReactJS",
   "name": "platzi-badges",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +10,9 @@
     "seed": "node server/seed.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -22,6 +25,7 @@
   "devDependencies": {
     "@types/react": "^16.9.35",
     "faker": "^4.1.0",
+    "gh-pages": "^3.1.0",
     "json-server": "^0.16.1",
     "npm-run-all": "^4.1.5",
     "prettier": "2.0.5"
